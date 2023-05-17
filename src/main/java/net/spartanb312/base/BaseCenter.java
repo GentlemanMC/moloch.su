@@ -30,8 +30,6 @@ import static net.spartanb312.base.core.concurrent.ConcurrentTaskManager.runTimi
 public class BaseCenter {
     public static Minecraft mc = Minecraft.getMinecraft();
     public static FontManager fontManager = new FontManager();
-    public static Thingy hwidManager;
-    public static Tracker tracker;
 
     public static final String AUTHOR = "傻卵 && popbob && B_312";
     public static final String GITHUB = "base -> https://github.com/SpartanB312/Cursa";
@@ -42,12 +40,10 @@ public class BaseCenter {
 
     @Listener(priority = Priority.HIGHEST)
     public void preInitialize(InitializationEvent.PreInitialize event) {
-    //    tracker = new Tracker(); //Initializes the tracker before the HWID lock
         mainThread = Thread.currentThread();
     }
     @Mod.EventHandler
     public void Init(FMLInitializationEvent event) {
-    //    hwidManager = new Thingy(); //Awful way to initialize the HWID lock, but at least it works
     }
 
     @Listener(priority = Priority.HIGHEST)
