@@ -4,8 +4,6 @@ import me.afterdarkness.moloch.client.EnemyManager;
 import me.afterdarkness.moloch.client.PopManager;
 import me.afterdarkness.moloch.client.RotationManager;
 import me.afterdarkness.moloch.client.ServerManager;
-import me.peterdev.simplelock.Thingy;
-import me.afterdarkness.moloch.tracker.Tracker;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -44,12 +42,12 @@ public class BaseCenter {
 
     @Listener(priority = Priority.HIGHEST)
     public void preInitialize(InitializationEvent.PreInitialize event) {
-        tracker = new Tracker(); //Initializes the tracker before the HWID lock
+    //    tracker = new Tracker(); //Initializes the tracker before the HWID lock
         mainThread = Thread.currentThread();
     }
     @Mod.EventHandler
     public void Init(FMLInitializationEvent event) {
-        hwidManager = new Thingy(); //Awful way to initialize the HWID lock, but at least it works
+    //    hwidManager = new Thingy(); //Awful way to initialize the HWID lock, but at least it works
     }
 
     @Listener(priority = Priority.HIGHEST)
